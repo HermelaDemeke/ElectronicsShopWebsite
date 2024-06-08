@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,16 +99,19 @@
     </div>
 </div>
     </section>
+
     <!--Featured-->
     <section id="Featured">
         <div class="container">
 <h3>Our Feature Product</h3>
        <hr width="1600"> 
-<p>Here you can check out our Featured products</p>
+<p>check out our Featured products</p>
         </div>
         <div class="row">
+            <?php include('server/featured_product.php');?>
+            <?php while($row= $feature_pro->fetch_assoc()){?>
 <div class="product">
-    <img class="" src="assets/images/amazontv.webp" alt="amazontv">
+    <img class="" src="assets/images/<?php echo $row['product_image'] ;?>" alt="amazontv">
     <div class="star">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -115,51 +119,11 @@
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
     </div>
-    <h5 class="p-name">Smart Tv</h5>
-    <h4 class="p-price">$299.9</h4>
+    <h5 class="p-name"><?php echo $row['product_name'];?></h5>
+    <h4 class="p-price"><?php echo $row['product_price'];?></h4>
     <button class="buy-now">Buy Now</button>
 </div>
-<div class="product">
-    <img class="" src="assets/images/amazonLaptop.webp" alt="amazonLaptop">
-    <div class="star">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-    <h5 class="p-name">Smart Laptops</h5>
-    <h4 class="p-price">$137.99</h4>
-    <button class="buy-now">Buy Now</button>
-</div>
-<div class="product">
-    <img class="" src="assets/images/amazonPhone.webp" alt="amazonPhone">
-    <div class="star">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-    <h5 class="p-name">Smart Phones</h5>
-    <h4 class="p-price">$179.99</h4>
-    <button class="buy-now">Buy Now</button>
-</div>
-<div class="product">
-    <img class="" src="assets/images/amazonCamera.webp" alt="amazonCamera">
-    <div class="coll">
-    <div class="star">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-    <h5 class="p-name">Smart Cameras</h5>
-    <h4 class="p-price">$120.84</h4>
-    <button class="buy-now">Buy Now</button>
-    </div>
-</div>
+<?php }?>
         </div>
 
     </section>
