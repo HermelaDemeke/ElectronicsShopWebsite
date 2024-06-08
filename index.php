@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +34,7 @@
                 <li><a href="tv.html">Tv</a></li>
                 <li><a href="cameras.html">Cameras</a></li>
                 <li><a href="accessories.html">Accessories</a></li>
-             <li><a href="#">SIGN UP</a></li>
+                <li><a href="#">SIGN UP</a></li>
             </ul>
         
         <ul>
@@ -60,7 +61,7 @@
 <button>Shop Now</button>
 </div>
     </section>
-    <!--Brand2-->
+    <!--Brand-->
     <section id="brand">
 <div class="row">
   
@@ -71,7 +72,7 @@
     <img src="assets/images/brand2.jpg" alt="LG">
 </div>
     </section>
-    <!--New sec-->
+    <!--New-->
     <section id="new"> 
 <div class="one">
 <img src="assets/images/sum.jpg" alt="phone">
@@ -84,6 +85,7 @@
 <div class="one">
     <img src="assets/images/tvv.png" alt="tv">
     <div class="details">
+        <h2>Awesome TV</h2>
         <h2>Best TV</h2>
         <button>Shop Now</button>
     </div>
@@ -102,6 +104,14 @@
         <div class="container">
 <h3>Our Feature Product</h3>
        <hr width="1600"> 
+<p>check out our Featured products</p>
+        </div>
+        <div class="row">
+            <?php include('server/featured_product.php');?>
+            <?php while($row= $feature_pro->fetch_assoc()){?>
+<div class="product">
+    <img class="" src="assets/images/<?php echo $row['product_image'] ;?>" alt="amazontv">
+
 <p>Here you can check out our Featured products</p>
         </div>
         <div class="row">
@@ -140,6 +150,12 @@
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
     </div>
+    <h5 class="p-name"><?php echo $row['product_name'];?></h5>
+    <h4 class="p-price"><?php echo $row['product_price'];?></h4>
+    <button class="buy-now">Buy Now</button>
+</div>
+<?php }?>
+
     <h5 class="p-name">Smart Phones</h5>
     <h4 class="p-price">$230.99</h4>
     <button class="buy-now">Buy Now</button>
@@ -202,6 +218,11 @@
     </div>
     <div>
         <h6>Phone Number</h6>
+        <p>+251988747881</p>
+    </div>
+    <div>
+        <h6>Email</h6>
+        <p>bhmd0595@gmail.com</p>
         <p>+251977636953</p>
     </div>
     <div>
@@ -239,6 +260,8 @@
 </div>
     </footer>
 </body>
+</html>
+
 <footer>
         <div class="footer">
             <div class="footer-one">

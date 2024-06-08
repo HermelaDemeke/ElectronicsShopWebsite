@@ -207,6 +207,12 @@ footer .copy-right img {
   margin-right: 10px;
 }
 
+.orders td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
 .product:hover img {
   opacity: 0.7;
 }
@@ -349,7 +355,6 @@ hr {
 
 footer {
   background-color: #222;
-  margin-top: 20%;
 }
 
 footer h5 {
@@ -567,4 +572,100 @@ th:last-child {
 
 #register-form #login-url {
   color: #fb774b;
+}
+
+/* Account */
+#account-form {
+  width: 50%;
+  margin: 35px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+#account-form input {
+  margin: 5px auto;
+  height: 40px;
+  width: 300px;
+}
+
+#account-form #change-pass-btn {
+  color: #fff;
+  background-color: #fb774b;
+}
+
+.account-info #order-btn,
+#logout-btn {
+  text-decoration: none;
+  color: #fb774b;
+}
+
+.account {
+  margin-left: 20%;
+  margin-top: 3%;
+}
+
+/* Orders */
+.orders hr {
+  margin: auto;
+}
+
+.orders h2 {
+  text-align: center;
+}
+
+.orders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders .product-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.orders th {
+  padding: 5px 20px;
+  color: #fff;
+  background-color: #fb774b;
+  text-align: left;
+}
+
+.orders th:nth-child(2) {
+  text-align: right;
+}
+
+.orders td {
+  padding: 10px 20px;
+}
+
+/* Check-Out */
+#checkout-form input {
+  width: 750px;
+  height: 40px;
+}
+
+#checkout-form .checkout-small-element {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
+#checkout-form .checkout-large-element {
+  width: 95%;
+  margin-left: 150px;
+}
+
+#checkout-form .checkout-btn-container {
+  text-align: right;
+  margin-right: 40px;
+}
+
+#checkout-form #checkout-btn {
+  color: #fff;
+  background-color: #fb774b;
+}
+
+/* Contact */
+#contact span {
+  color: brown;
 }
