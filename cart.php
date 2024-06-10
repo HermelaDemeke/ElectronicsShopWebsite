@@ -1,8 +1,5 @@
 <?php
 include ('server/connection.php')
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -208,5 +205,5 @@ include ('server/connection.php')
     </footer>
 
     </body>
-    
     </html>
+

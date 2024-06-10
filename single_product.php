@@ -1,3 +1,4 @@
+
 <?php
 include('server/connection.php');
 if(isset($_GET['product_id'])){
@@ -159,9 +160,6 @@ $product = $statement->get_result();
     </div>
 
 </section>
-
-
-
         <!--Footer-->
         <footer>
             <div class="footer">
