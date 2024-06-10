@@ -106,43 +106,12 @@
        <hr width="1600"> 
 <p>check out our Featured products</p>
         </div>
+    
         <div class="row">
-            <?php include('server/featured_product.php');?>
-            <?php while($row= $feature_pro->fetch_assoc()){?>
+        <?php include('server/featured_product.php');?>
+        <?php while($row = $feature_pro ->fetch_assoc()){?>
 <div class="product">
-    <img class="" src="assets/images/<?php echo $row['product_image'] ;?>" alt="amazontv">
-
-<p>Here you can check out our Featured products</p>
-        </div>
-        <div class="row">
-<div class="product">
-    <img class="" src="assets/images/amazontv.webp" alt="amazontv">
-    <div class="star">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-    <h5 class="p-name">Smart Tv</h5>
-    <h4 class="p-price">$300.50</h4>
-    <button class="buy-now">Buy Now</button>
-</div>
-<div class="product">
-    <img class="" src="assets/images/amazonLaptop.webp" alt="amazonLaptop">
-    <div class="star">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-    <h5 class="p-name">Smart Laptops</h5>
-    <h4 class="p-price">$400.99</h4>
-    <button class="buy-now">Buy Now</button>
-</div>
-<div class="product">
-    <img class="" src="assets/images/amazonPhone.webp" alt="amazonPhone">
+    <img class="" src="assets/images/<?php echo $row['product_image'] ;?>" alt="tv">
     <div class="star">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -152,31 +121,11 @@
     </div>
     <h5 class="p-name"><?php echo $row['product_name'];?></h5>
     <h4 class="p-price"><?php echo $row['product_price'];?></h4>
-    <button class="buy-now">Buy Now</button>
+    <a href="<?php echo "single_product.php?product_id=". $row['product_id'];?>"><button class="buy-now">Buy Now</button></a>
 </div>
-<?php }?>
-
-    <h5 class="p-name">Smart Phones</h5>
-    <h4 class="p-price">$230.99</h4>
-    <button class="buy-now">Buy Now</button>
-</div>
-<div class="product">
-    <img class="" src="assets/images/amazonCamera.webp" alt="amazonCamera">
-    <div class="coll">
-    <div class="star">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-    <h5 class="p-name">Smart Cameras</h5>
-    <h4 class="p-price">$520.84</h4>
-    <button class="buy-now">Buy Now</button>
-    </div>
-</div>
+     <?php }?>
         </div>
-
+            
     </section>
     <!--Banner-->
     <section id="banner">
@@ -262,67 +211,3 @@
 </body>
 </html>
 
-<footer>
-        <div class="footer">
-            <div class="footer-one">
-                <img src="" alt="">
-                <p class="para">We provide the best product for the most affordable prices</p>
-            </div>
-        <div class="footer-one">
-            <h5>Featured</h5>
-            <ul>
-                <li><a href="laptop.html">Laptops</a></li>
-                <li><a href="tv.html">Tv</a></li>
-                <li><a href="phone.html">Phones</a></li>
-                <li><a href="cameras.html">Cameras</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Electronics</a></li>
-            </ul>
-        </div>
-
-            <div class="footer-one">
-                <h5 class="">Contact Us</h5>
-                <div>
-                    <h6>Address</h6>
-                    <p>1000 street Name, City</p>
-                </div>
-                <div>
-                    <h6>Phone Number</h6>
-                    <p>+251977636953</p>
-                </div>
-                <div>
-                    <h6>Email</h6>
-                    <p>kueth123@gmail.com</p>
-                </div>
-            </div>
-        <div class="footer-one">
-            <h5>instagram</h5>
-            <div class="">
-                <img src="assets/images/iphon.jpg" alt="phone" class="" width="100" height="100">
-                <img src="assets/images/small-tvs-1628089080.jpg" alt="tv" class="" width="100" height="100">
-                <img src="assets/images/lap2.jpg" alt="laptop" class="" width="100" height="100">
-                <img src="assets/images/camera10.jpg" alt="camera" class="" width="100" height="100">
-                <img src="assets/images/tab.jpg" alt="accessories" class="" width="100" height="100">
-            </div>
-        </div>
-        </div>
-
-        <div>
-            <div class="copy-right">
-                <div>
-                    <img src="assets/images/payment method.png" alt="paymentmethod">
-                </div>
-                <div>
-                    <p>eCommerce @2025 All Right Reserved</p>
-                </div>
-                <div class="images">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-</html>

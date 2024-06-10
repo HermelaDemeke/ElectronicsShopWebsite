@@ -1,3 +1,18 @@
+
+<?php
+include('server/connection.php');
+if(isset($_GET['product_id'])){
+    $product_id= $_GET['product_id'];
+$statement=$conn->prepare("SELECT * FROM product WHERE product_id = ?");
+$statement->bind_param("i",$product_id);
+$statement->execute();
+$product = $statement->get_result();
+}
+ else{
+    header('location: index.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,39 +61,39 @@
 <!--Single-Product-->
         <section class="single-product">
             <div class="row">
+                <?php while($row=$product->fetch_assoc()){?>
                 <div>
-                    <img id="mainImg" class="lap" src="assets/images/amazonLaptop.webp "alt="amazonLaptop" width="100%" >
+                    <img id="mainImg" class="lap" src="assets/images/<?php echo $row['product_image']; ?>"alt="amazonLaptop" width="100%" >
                     <div class="small-img-group">
 <div class="small-img-col">
-<img src="assets/images/amazontv.webp" alt="phone" class="small-img" width="100%" height="100%">
+<img src="assets/images/<?php echo $row['product_image']; ?>" alt="phone" class="small-img" width="100%">
 </div>
 <div class="small-img-col">
-    <img src="assets/images/amazonPhon.webp" alt="tv" class="small-img" width="100%" height="100%">
+    <img src="assets/images/<?php echo $row['product_image2']; ?>" alt="tv" class="small-img" width="100%">
 </div>
 <div class="small-img-col">
-    <img src="assets/images/amazonCamera.webp" alt="camera" class="small-img" width="100%" height="100%">
+    <img src="assets/images/<?php echo $row['product_image3']; ?>" alt="camera" class="small-img" width="100%">
 </div>
 <div class="small-img-col">
-    <img src="assets/images/tab.jpg" alt="accessories" class="small-img" width="100%" height="100%">
+    <img src="assets/images/<?php echo $row['product_image4']; ?>" alt="accessories" class="small-img" width="100%">
 </div>
                     </div>
+                    
                 </div>
 <div class="Add-to-cart ">
-<h1>Laptop</h1>
-<h3>hp</h3>
-<h2>155$</h2>
-<input type="number" value="1">
-<button class="buy-now">Add To Cart</button>
+<h3><?php echo $row['product_name']; ?></h3>
+<h2><?php echo $row['product_price']; ?></h2>
+<form action="cart.php" method="POST">
+                        <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>">
+                        <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">
+                        <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>">
+                        <input type="number" name="product_quantity" value="1">
+ <button class="buy-now" type="submit" name="add_to_cart">Add To Cart</button>
+                </form>  
 <h4 class="prod">Product Details</h4>
-<span>The details of this product will be displayed shortly
-    The details of this product will be displayed shortly
-    The details of this product will be displayed shortly
-    The details of this product will be displayed shortly
-    The details of this product will be displayed shortly
-    The details of this product will be displayed shortly
-    
-</span>
+<span><?php echo $row['product_description']; ?></span>
 </div>
+<?php } ?>
             </div>
         </section>
 <!--Related Product-->
@@ -145,9 +160,6 @@
     </div>
 
 </section>
-
-
-
         <!--Footer-->
         <footer>
             <div class="footer">
