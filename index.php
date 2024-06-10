@@ -107,11 +107,12 @@
        <hr width="1600"> 
 <p>check out our Featured products</p>
         </div>
+    
         <div class="row">
-            <?php include('server/featured_product.php');?>
-            <?php while($row= $feature_pro->fetch_assoc()){?>
+        <?php include('server/featured_product.php');?>
+        <?php while($row = $feature_pro ->fetch_assoc()){?>
 <div class="product">
-    <img class="" src="assets/images/<?php echo $row['product_image'] ;?>" alt="amazontv">
+    <img class="" src="assets/images/<?php echo $row['product_image'] ;?>" alt="tv">
     <div class="star">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -121,11 +122,11 @@
     </div>
     <h5 class="p-name"><?php echo $row['product_name'];?></h5>
     <h4 class="p-price"><?php echo $row['product_price'];?></h4>
-    <button class="buy-now">Buy Now</button>
+    <a href="<?php echo "single_product.php?product_id=". $row['product_id'];?>"><button class="buy-now">Buy Now</button></a>
 </div>
-<?php }?>
+     <?php }?>
         </div>
-
+            
     </section>
     <!--Banner-->
     <section id="banner">
