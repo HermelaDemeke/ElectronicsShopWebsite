@@ -80,7 +80,6 @@ function CalculateTotalCart(){
     }
     $_SESSION['total'] =$total;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -252,5 +251,5 @@ function CalculateTotalCart(){
     </footer>
 
     </body>
-    
     </html>
+
