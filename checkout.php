@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if(!empty($_SESSION['cart']) && isset($_POST['checkout'])){
+    //let user in
+
+}else{
+    header('location: index.php');
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +62,7 @@
         <hr>
     </div>
     <div>
-        <form id="checkout-form" action="">
+        <form id="checkout-form" action="order.php" method="POST">
             <div class="form-group checkout-small-element">
                 <label>Name</label> <br>
                 <input type="text" class="form-control" id="checkout-name" name="name" placeholder="Name" required>
@@ -74,7 +86,8 @@
                 <input type="text" class="form-control" id="checkout-address" name="address" placeholder="Address" required>
             </div>
             <div class="form-group checkout-btn-container"> <br>
-                <input type="submit" class="btn" id="checkout-btn" value="CheckOut">
+            <p> Total Amount: $<?php echo $_SESSION ['total']; ?></p>
+                <input type="submit" name="place_order" class="btn" id="checkout-btn" value="Order">
             </div>
         </form>
     </div>
