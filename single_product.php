@@ -22,6 +22,7 @@ $product = $statement->get_result();
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Electronics Shopping Center</title>
+    
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="./assets/js/navigate.js"></script>
     </head>

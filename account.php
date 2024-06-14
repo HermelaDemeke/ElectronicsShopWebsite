@@ -1,3 +1,24 @@
+<?php
+session_start();
+
+if(isset($_SESSION['logged_in'])){
+    header('location:login.php');
+    exit;
+}
+if(isset($_GET['logout'])){
+    if(isset($_SESSION['logged_in'])){
+        unset($_SESSION['logged_in']);
+        unset($_SESSION['user_email']);
+        unset($_SESSION['user_name']);
+        header('location:login.php');
+        exit;
+    }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,10 +70,10 @@
     <h3>Account info</h3>
     <hr class="">
     <div class="account-info">
-<p>Name <span>hermela</span></p>
-<p>Email <span>bhmd0595@gmail.com</span></p>
-<p><a href="" id="order-btn">Your Orders</a></p>
-<p><a href="" id="logout-btn">Log Out</a></p>
+<p>Name <span><?php if(isset($_SESSION['user_name'])){ echo $_SESSION['user_name'];}?></span></p>
+<p>Email <span><?php if(isset($_SESSION['user_email'])){ echo $_SESSION['user_email'];}?></span></p>
+<p><a href="#order" id="order-btn">Your Orders</a></p>
+<p><a href="account.php?logout=1" id="logout-btn">Log Out</a></p>
     </div>
 </div>
 <div>
@@ -75,7 +96,7 @@
     </div>
 </section>
 
-<section class="orders">
+<section class="orders" id="order">
     <div>
         <h2>Your Orders</h2>
         <hr>
