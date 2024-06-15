@@ -1,15 +1,5 @@
-
 <?php
 session_start();
-
-if(!empty($_SESSION['cart']) && isset($_POST['checkout'])){
-    //let user in
-
-}else{
-    header('location: index.php');
-}
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,41 +46,16 @@ if(!empty($_SESSION['cart']) && isset($_POST['checkout'])){
             </ul>
         </nav>
 
-        <!--Check-out-->
+        <!--payment-->
 <section class="">
     <div class="container">
-        <h2 class="">Check-Out</h2>
+        <h2 class="">Payment</h2>
         <hr>
     </div>
     <div>
-        <form id="checkout-form" action="server/order.php" method="POST">
-            <div class="form-group checkout-small-element">
-                <label>Name</label> <br>
-                <input type="text" class="form-control" id="checkout-name" name="name" placeholder="Name" required>
-            </div>
-            <div class="form-group checkout-small-element">
-                <label>Email</label> <br>
-                <input type="text" class="form-control" id="checkout-email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group checkout-small-element">
-                <label>Phone Number</label> <br>
-                <input type="tel" class="form-control" id="checkout-phone" name="phone"
-                    placeholder="Phone" required>
-            </div>
-            <div class="form-group checkout-small-element">
-                <label>City</label> <br>
-                <input type="text" class="form-control" id="checkout-city" name="city"
-                    placeholder="City" required>
-            </div>
-            <div class="form-group checkout-large-element">
-                <label>Address</label> <br>
-                <input type="text" class="form-control" id="checkout-address" name="address" placeholder="Address" required>
-            </div>
-            <div class="form-group checkout-btn-container"> <br>
-            <p> Total Amount: $<?php echo $_SESSION ['total']; ?></p>
-                <input type="submit" name="place_order" class="btn" id="checkout-btn" value="Order">
-            </div>
-        </form>
+        <p><?php echo $_GET['order_status'];?></p>
+        <p>Total Payment: $<?php echo $_SESSION['total'];?></p>
+        <input class="btn" type="submit" value="pay Now" />
     </div>
 </section>
 

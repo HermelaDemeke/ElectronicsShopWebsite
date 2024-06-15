@@ -34,7 +34,7 @@
                 <li><a href="tv.html">Tv</a></li>
                 <li><a href="cameras.html">Cameras</a></li>
                 <li><a href="accessories.html">Accessories</a></li>
-                <li><a href="#">SIGN UP</a></li>
+                <li><a href="register.php">SIGN UP</a></li>
             </ul>
         
         <ul>
@@ -46,7 +46,7 @@
             <li class="hideOnMobile"><a href="tv.html">Tv</a></li>
             <li class="hideOnMobile"><a href="cameras.html">Cameras</a></li>
             <li class="hideOnMobile"><a href="accessories.html">Accessories</a></li>
-            <li class="hideOnMobile"><a href="#">SIGN UP</a></li>
+            <li class="hideOnMobile"><a href="register.php">SIGN UP</a></li>
             <li class="menu-button" id="nav"><img src="./assets/images/Hamburger-Menu-Blue-Version-01-1024x553-1.png" alt="menu-bar" height="26"></li>
         </ul>
     </nav>
