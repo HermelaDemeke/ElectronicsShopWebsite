@@ -17,8 +17,6 @@ if(isset($_GET['logout'])){
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,6 +72,7 @@ if(isset($_GET['logout'])){
 <p>Email <span><?php if(isset($_SESSION['user_email'])){ echo $_SESSION['user_email'];}?></span></p>
 <p><a href="#order" id="order-btn">Your Orders</a></p>
 <p><a href="account.php?logout=1" id="logout-btn">Log Out</a></p>
+
     </div>
 </div>
 <div>
@@ -97,6 +96,7 @@ if(isset($_GET['logout'])){
 </section>
 
 <section class="orders" id="order">
+
     <div>
         <h2>Your Orders</h2>
         <hr>
@@ -190,3 +190,4 @@ if(isset($_GET['logout'])){
 </body>
 
 </html>
+

@@ -36,7 +36,6 @@
                 <li><a href="accessories.html">Accessories</a></li>
                 <li><a href="register.php">SIGN UP</a></li>
             </ul>
-
         
         <ul>
             <li class="head"><img src="" alt=""></li>
@@ -87,6 +86,7 @@
     <img src="assets/images/tvv.png" alt="tv">
     <div class="details">
         <h2>Awesome TV</h2>
+        <h2>Best TV</h2>
         <button>Shop Now</button>
     </div>
 </div>
@@ -99,7 +99,6 @@
     </div>
 </div>
     </section>
-
     <!--Featured-->
     <section id="Featured">
         <div class="container">
@@ -173,6 +172,11 @@
     <div>
         <h6>Email</h6>
         <p>bhmd0595@gmail.com</p>
+        <p>+251977636953</p>
+    </div>
+    <div>
+        <h6>Email</h6>
+        <p>kueth123@gmail.com</p>
     </div>
     </div>
 <div class="footer-one">
@@ -206,3 +210,4 @@
     </footer>
 </body>
 </html>
+
