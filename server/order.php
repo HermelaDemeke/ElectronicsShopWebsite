@@ -2,6 +2,10 @@
 session_start();
 include ('connection.php');
 
+if(!isset($_SESSION['logged_in'])){
+    header('location: ../checkout.php?message= please register to place an order');
+}else{
+
 if(isset($_POST['place_order']))
 {
 //get user info and store it in db
@@ -11,8 +15,8 @@ $phone = $_POST['phone'];
 $city = $_POST['city'];
 $address = $_POST['address'];
 $order_cost =$_SESSION['total'];
-$order_status = "on_hold";
-$user_id = 1;
+$order_status = "not paid";
+$user_id = $_SESSION['user_id'];
 $order_date= date('y-m-d H:i:s');
 $statement=$conn->prepare("INSERT INTO orders(order_cost,order_status,user_id,user_phone,user_city,user_address,order_date)
 VALUES(?,?,?,?,?,?,?);");
@@ -55,5 +59,5 @@ remove evry thing from cart
 header('location: ../payment.php?order_status=order placed successfully');
 }
 
-
+}
 ?>
