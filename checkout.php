@@ -2,7 +2,7 @@
 <?php
 session_start();
 
-if(!empty($_SESSION['cart']) && isset($_POST['checkout'])){
+if(!empty($_SESSION['cart'])){
     //let user in
 
 }else{
@@ -64,7 +64,17 @@ if(!empty($_SESSION['cart']) && isset($_POST['checkout'])){
     </div>
     <div>
         <form id="checkout-form" action="server/order.php" method="POST">
-            <div class="form-group checkout-small-element">
+           <p style="color:red">
+            <?php if(isset($_GET['message'])){echo $_GET['message'];} ?>
+            <?php if(isset($_GET['message'])) {?>
+  
+                <a class="btn" href="login.php">Login</a>
+
+
+                <?php } ?>
+        </p>
+        
+           <div class="form-group checkout-small-element">
                 <label>Name</label> <br>
                 <input type="text" class="form-control" id="checkout-name" name="name" placeholder="Name" required>
             </div>

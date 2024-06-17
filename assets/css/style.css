@@ -89,7 +89,7 @@ footer li {
 }
 
 nav li:first-child {
-  margin-right: auto;
+  margin: auto;
 }
 
 .sidebar {
@@ -289,7 +289,12 @@ footer .copy-right img {
   background-color: brown;
   transform: translateY(50px);
   opacity: 0;
+  color: #fff;
   transition: 0.3s all;
+}
+
+.shop .buy-now {
+  text-decoration: none;
 }
 
 .single-product .buy-now {
@@ -444,7 +449,6 @@ footer .copy-right a:hover {
   height: 40px;
   padding-left: 10px;
   font-size: 16px;
-  font-weight: bold;
   margin-right: 10px;
 }
 
@@ -621,26 +625,22 @@ th:last-child {
 .orders table {
   width: 100%;
   border-collapse: collapse;
-}
-
-.orders .product-info {
-  display: flex;
-  flex-wrap: wrap;
+  margin: auto;
 }
 
 .orders th {
   padding: 5px 20px;
   color: #fff;
   background-color: #fb774b;
-  text-align: left;
-}
-
-.orders th:nth-child(2) {
-  text-align: right;
 }
 
 .orders td {
   padding: 10px 20px;
+}
+
+.orders .order-detail-btn {
+  color: #fff;
+  background-color: #fb774b;
 }
 
 /* Check-Out */

@@ -10,24 +10,7 @@
     <title>Electronics Shopping Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="./assets/js/navigate.js"></script>
-    <style>
-.product img{
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    object-fit: cover;
-}
-.pagination a {
- color:blueviolet;
- font-size: xx-large;
- font-weight: bolder;
-}
-.pagination li:hover a{
-    color: #fff;
-    background-color: coral;
-}
- 
-    </style>
+
 </head>
 
 <body>
@@ -35,332 +18,61 @@
         <ul class="sidebar">
             <li id="nav2"><a href="#"><img src="./assets/images/images.png" height="26" alt=""></a></li>
             <li class="head"><img src="" alt=""></li>
-            <h5>MHD Electronics</h5>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="phone.html">Phone</a></li>
-            <li><a href="laptop.html">Laptop</a></li>
-            <li><a href="tv.html">Tv</a></li>
-            <li><a href="cameras.html">Cameras</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="#">SIGN UP</a></li>
+
+            <li><a href="index.php">Home</a></li>
+            <li><a href="phone.php">Phone</a></li>
+            <li><a href="tv.php">Tv</a></li>
+            <li><a href="accessories.php">Accessories</a></li>
+            <li><a href="laptop.php">Laptop</a></li>
+            <li><a href="cameras.php">Camera</a></li>
         </ul>
-    
-    
+
+
         <ul>
             <li class="head"><img src="" alt=""></li>
-            <h5>MHD Electronics</h5>
-            <li><a href="index.html">Home</a></li>
-            <li class="hideOnMobile"><a href="phone.html">Phone</a></li>
-            <li class="hideOnMobile"><a href="laptop.html">Laptop</a></li>
-            <li class="hideOnMobile"><a href="tv.html">Tv</a></li>
-            <li class="hideOnMobile"><a href="cameras.html">Cameras</a></li>
-            <li class="hideOnMobile"><a href="accessories.html">Accessories</a></li>
-            <li class="hideOnMobile"><a href="#">SIGN UP</a></li>
+            <li class="hideOnMobile"><a href="index.php">Home</a></li>
+            <li class="hideOnMobile"><a href="phone.php">Phone</a></li>
+            <li class="hideOnMobile"><a href="tv.php">Tv</a></li>
+            <li class="hideOnMobile"><a href="accessories.php">Accessories</a></li>
+            <li class="hideOnMobile"><a href="laptop.php">Laptop</a></li>
+            <li class="hideOnMobile"><a href="cameras.php">Camera</a></li>
+
             <li class="menu-button" id="nav"><img src="./assets/images/Hamburger-Menu-Blue-Version-01-1024x553-1.png"
                     alt="menu-bar" height="26"></li>
         </ul>
     </nav>
-<section id="Featured">
-    <div class="container">
-        <h3>Our Feature Product</h3>
-        <hr width="1600">
-        <p> check out our Featured products</p>
-    </div>
-    <div class="row">
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/iphone15 pro.jpg" alt="amazontv">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">iphone 15</h5>
-            <h4 class="p-price">$400.9</h4>
-            <button class="buy-now">Buy Now</button>
+<!-- Phone-->
+    <section id="Featured">
+        <div class="container">
+            <h3>Best Phone Product</h3>
+            <hr width="1600">
+            <p> check out our unique phones</p>
         </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/iphone 11 pro.jpg" alt="amazonLaptop">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">iphone 11pro_max</h5>
-            <h4 class="p-price">$500.56</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/amazonPhone.webp" alt="amazonPhone">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Tecno 9</h5>
-            <h4 class="p-price">$600.99</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/iphon3.jpg" alt="amazonCamera">
-            <div class="coll">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">iphone 12</h5>
-                <h4 class="p-price">$800.84</h4>
-                <button class="buy-now">Buy Now</button>
-            </div>
-        </div>
-    </div>
-    <div onclick="window.location.href='single_product.html';" class="row">
-        <div class="product">
-            <img class="" src="assets/images/iphon4.jpg" alt="amazontv">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Iphone 8</h5>
-            <h4 class="p-price">$300.9</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/iphon5.jpg" alt="amazonLaptop">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">iphone 12</h5>
-            <h4 class="p-price">$700.99</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/iphone.jpg" alt="amazonPhone">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">iphone 7</h5>
-            <h4 class="p-price">$500.99</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum.jpg" alt="amazonCamera">
-            <div class="coll">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Sumsung A21</h5>
-                <h4 class="p-price">$900.45</h4>
-                <button class="buy-now">Buy Now</button>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum2.jpg" alt="amazontv">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Iphone 6</h5>
-            <h4 class="p-price">$400.9</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum3.jpg" alt="amazonLaptop">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Sumsung A20</h5>
-            <h4 class="p-price">$600.99</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum4.jpg" alt="amazonPhone">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Blackberry</h5>
-            <h4 class="p-price">$1009.99</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum5.jpg" alt="amazonCamera">
-            <div class="coll">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">infinix 20</h5>
-                <h4 class="p-price">$459.84</h4>
-                <button class="buy-now">Buy Now</button>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum6.jpg" alt="amazontv">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Cameron phone</h5>
-            <h4 class="p-price">$1200.9</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum7.jpg" alt="amazonLaptop">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Oppo phone A76</h5>
-            <h4 class="p-price">$600.99</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/sum8.jpg" alt="amazonPhone">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Tecno phone</h5>
-            <h4 class="p-price">$1000.99</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        <div onclick="window.location.href='single_product.html';" class="product">
-            <img class="" src="assets/images/tab5.jpg" alt="amazonCamera">
-            <div class="coll">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">iphone x</h5>
-                <h4 class="p-price">$300.84</h4>
-                <button class="buy-now">Buy Now</button>
-            </div>
-        </div>
-    </div>
-    <nav class="Previous">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="laptop.html">Next</a></li>
-        </ul>
-    </nav>
 
-</section>
-    <footer>
-        <div class="footer">
-            <div class="footer-one">
-                <img src="" alt="">
-                <p class="para">We provide the best product for the most affordable prices</p>
+        <div class="row">
+
+        <?php include('server/get_phone.php'); ?>
+
+        <?php while($row = $phone->fetch_assoc()){?>
+
+            <div class="product">
+               <img class="" src="assets/images/<?php echo $row['product_image'];?>" alt="smart phone">
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
             </div>
-            <div class="footer-one">
-                <h5>Featured</h5>
-                <ul>
-                    <li><a href="laptop.html">Laptops</a></li>
-                    <li><a href="tv.html">Tv</a></li>
-                    <li><a href="phone.html">Phones</a></li>
-                    <li><a href="cameras.html">Cameras</a></li>
-                    <li><a href="accessories.html">Accessories</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Electronics</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-one">
-                <h5 class="">Contact Us</h5>
-                <div>
-                    <h6>Address</h6>
-                    <p>1000 street Name, City</p>
-                </div>
-                <div>
-                    <h6>Phone Number</h6>
-                    <p>+251977636959</p>
-                </div>
-                <div>
-                    <h6>Email</h6>
-                    <p>kueth123@gmail.com</p>
-                </div>
-            </div>
-        <div class="footer-one">
-            <h5>instagram</h5>
-            <div class="">
-                <img src="assets/images/iphon.jpg" alt="phone" class="" width="100" height="100">
-                <img src="assets/images/small-tvs-1628089080.jpg" alt="tv" class="" width="100" height="100">
-                <img src="assets/images/lap2.jpg" alt="laptop" class="" width="100" height="100">
-                <img src="assets/images/camera10.jpg" alt="camera" class="" width="100" height="100">
-                <img src="assets/images/tab.jpg" alt="accessories" class="" width="100" height="100">
-            </div>
+           
+                <h5 class="p-name"><?php echo $row['product_name'];?></h5>
+                <h4 class="p-price">$<?php echo $row['product_price'];?></h4>
+               <a href="<?php echo "single_product.php?product_id=". $row['product_id'];?>"><button class="buy-now">Buy Now</button></a>
+             </div>
+            
+<?php } ?>
+
+           
         </div>
-        </div>
-    
-        <div>
-            <div class="copy-right">
-                <div>
-                    <img src="assets/images/payment method.png" alt="paymentmethod">
-                </div>
-                <div>
-                    <p>eCommerce @2024 All Right Reserved</p>
-                </div>
-                <div class="images">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-    
-                </div>
-            </div>
-        </div>
-    </footer>
-    </body>
-    
-    </html>
+    </section>
+<?php include('outline/footer.php'); ?>

@@ -1,10 +1,13 @@
 <?php
 session_start();
 
+include('server/connection.php');
+/*
 if(isset($_SESSION['logged_in'])){
     header('location:login.php');
     exit;
 }
+    */
 if(isset($_GET['logout'])){
     if(isset($_SESSION['logged_in'])){
         unset($_SESSION['logged_in']);
@@ -15,56 +18,53 @@ if(isset($_GET['logout'])){
     }
 }
 
+if(isset($_POST['change_password'])){
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmpassword'];
+    $user_email= $_SESSION['user_email'];
+
+ //password don't match
+    if ($password !== $confirmPassword) {
+        header('location: account.php?error= password donot match');
+    } 
+    // if password is less than 8character
+    else if (strlen($password) < 8) {
+        header('location: account.php?error= password must be at least 8 character');
+    } 
+    //if there is no error
+    else{
+      $stmt=  $conn->prepare("UPDATE users SET user_password = ? WHERE user_email=?");
+$stmt->bind_param('ss',md5($password),$user_email);
+
+if($stmt->execute()){
+    header('location:account.php? message=password has been updated successfully');
+}else
+header('location:account.php? error=password is not updated');
+
+    }
+}
+
+
+//get orders
+
+if(isset($_SESSION['logged_in'])){
+    $user_id = $_SESSION['user_id'];
+    $stmt=$conn->prepare("SELECT * FROM orders WHERE user_id = ?");
+    $stmt->bind_param('i',$user_id);
+    $stmt-> execute();
+    $orders = $stmt->get_result();
+}
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<?php include('outline/header.php'); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Electronics Shopping Center</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript" src="./assets/js/navigate.js"></script>
-</head>
-
-<body>
-    <nav class="head-back">
-        <ul class="sidebar">
-            <li id="nav2"><a href="#"><img src="./assets/images/images.png" height="26" alt=""></a></li>
-            <li class="head"><img src="" alt=""></li>
-            <h5>MHD Electronics</h5>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="phone.html">Phone</a></li>
-            <li><a href="laptop.html">Laptop</a></li>
-            <li><a href="tv.html">Tv</a></li>
-            <li><a href="cameras.html">Cameras</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="#">SIGN UP</a></li>
-        </ul>
-
-
-        <ul>
-            <li class="head"><img src="" alt=""></li>
-            <h5>MHD Electronics</h5>
-            <li><a href="index.html">Home</a></li>
-            <li class="hideOnMobile"><a href="phone.html">Phone</a></li>
-            <li class="hideOnMobile"><a href="laptop.html">Laptop</a></li>
-            <li class="hideOnMobile"><a href="tv.html">Tv</a></li>
-            <li class="hideOnMobile"><a href="cameras.html">Cameras</a></li>
-            <li class="hideOnMobile"><a href="accessories.html">Accessories</a></li>
-            <li class="hideOnMobile"><a href="#">SIGN UP</a></li>
-            <li class="menu-button" id="nav"><img src="./assets/images/Hamburger-Menu-Blue-Version-01-1024x553-1.png"
-                    alt="menu-bar" height="26"></li>
-        </ul>
-    </nav>
     <!--Account-->
 <section>
     <div class="row">
 <div class="account">
+    <p style="color:green"><?php if(isset($_GET['register'])){echo $_GET['register'];} ?></p>
+    <p style="color:green"><?php if(isset($_GET['login_success'])){echo $_GET['login_success'];} ?></p>
     <h3>Account info</h3>
     <hr class="">
     <div class="account-info">
@@ -76,7 +76,9 @@ if(isset($_GET['logout'])){
     </div>
 </div>
 <div>
-    <form action="" id="account-form">
+    <form action="account.php" id="account-form" method="POST">
+        <p style ="color:red"><?php if(isset($_GET['error'])) {echo $_GET['error'];} ?></p>
+        <p style ="color:green"><?php if(isset($_GET['message'])) {echo $_GET['message'];} ?></p>
         <h3>Change Password</h3>
         <hr>
         <div class="form-group">
@@ -85,10 +87,10 @@ if(isset($_GET['logout'])){
         </div>
         <div class="form-group">
             <label for="">Confirm Password</label>
-            <input type="password" class="form-control" id="account-password-confirm" placeholder="Confirmpassword" name="password" required>
+            <input type="password" class="form-control" id="account-password-confirm" placeholder="Confirmpassword" name="confirmpassword" required>
         </div>
         <div class="form-group">
-<input type="submit" value="Change Password" class="btn" id="Change-pass-btn">
+<input type="submit" value="Change Password" class="btn" id="Change-pass-btn" name="change_password">
         </div>
     </form>
 </div>
@@ -102,92 +104,41 @@ if(isset($_GET['logout'])){
         <hr>
         <table>
             <tr>
-                <th>Product</th>
-                <th>Date</th>
+                <th>Order ID</th>
+                <th>Order Cost</th>
+                <th>Order Status</th>
+                <th> Order Date</th>
+                <th>Order Details</th>
              
             </tr>
+            <?php while($row = $orders->fetch_assoc()) { ?>
             <tr>
                 <td>
-                <div class="product-info">
-<img src="assets/images/amazonCamera.webp" alt="amazonCamera">
-<div>
-<p>amazonCamera</p>
-</div>
-                </div>
+         <p><?php echo $row['order_id'];?></p>
                 </td>
                 <td>
-<span>2036-05-08</span>
+      <span>$<?php echo $row['order_cost'];?></span>
+                </td>
+                <td>
+      <span><?php echo $row['order_status'];?></span>
+                </td>
+
+                <td>
+      <span><?php echo $row['order_date'];?></span>
+                </td>
+                <td>
+                    <form action="detail.php" method="POST">
+                        <input type="hidden" value="<?php echo $row['order_status']; ?>" name="order_status"/>
+                        <input type="hidden" value="<?php echo $row['order_id']; ?>" name="order_id"/>
+                        <input type="submit" class="order-detail-btn" value="details" name="detail"/>
+                    </form>
                 </td>
             </tr>
-           
+            <?php } ?>
         </table>
 
     </div>
 
 </section>
 
-    <footer>
-        <div class="footer">
-            <div class="footer-one">
-                <img src="" alt="">
-                <p class="para">We provide the best product for the most affordable prices</p>
-            </div>
-            <div class="footer-one">
-                <h5>Featured</h5>
-                <ul>
-                    <li><a href="laptop.html">Laptops</a></li>
-                    <li><a href="tv.html">Tv</a></li>
-                    <li><a href="phone.html">Phones</a></li>
-                    <li><a href="cameras.html">Cameras</a></li>
-                    <li><a href="accessories.html">Accessories</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Electronics</a></li>
-                </ul>
-            </div>
-            <div class="footer-one">
-                <h5 class="">Contact Us</h5>
-                <div>
-                    <h6>Address</h6>
-                    <p>1000 street Name, City</p>
-                </div>
-                <div>
-                    <h6>Phone Number</h6>
-                    <p>+251988747881</p>
-                </div>
-                <div>
-                    <h6>Email</h6>
-                    <p>bhmd0595@gmail.com</p>
-                </div>
-            </div>
-            <div class="footer-one">
-                <h5>instagram</h5>
-                <div class="">
-                    <img src="assets/images/iphon.jpg" alt="phone" class="" width="100" height="100">
-                    <img src="assets/images/small-tvs-1628089080.jpg" alt="tv" class="" width="100" height="100">
-                    <img src="assets/images/lap2.jpg" alt="laptop" class="" width="100" height="100">
-                    <img src="assets/images/camera10.jpg" alt="camera" class="" width="100" height="100">
-                    <img src="assets/images/tab.jpg" alt="accessories" class="" width="100" height="100">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="copy-right">
-                <div>
-                    <img src="assets/images/payment method.png" alt="paymentmethod">
-                </div>
-                <div>
-                    <p>eCommerce @2025 All Right Reserved</p>
-                </div>
-                <div class="images">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
-
+   <?php include('outline/footer.php'); ?>
