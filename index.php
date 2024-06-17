@@ -1,5 +1,6 @@
 <?php include('outline/header.php'); ?>
- <!--Home-->
+
+    <!--Home-->
     <section id="home">
 <div>
     <div class="contain-1">
@@ -46,7 +47,6 @@
     </div>
 </div>
     </section>
-
     <!--Featured-->
     <section id="Featured">
         <div class="container">

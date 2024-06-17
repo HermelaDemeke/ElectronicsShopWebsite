@@ -10,6 +10,7 @@
     <title>Electronics Shopping Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="./assets/js/navigate.js"></script>
+
 </head>
 
 <body>
@@ -23,6 +24,7 @@
             <li><a href="accessories.php">Accessories</a></li>
             <li><a href="laptop.php">Laptop</a></li>
             <li><a href="cameras.php">Camera</a></li>
+
         </ul>
 
 
@@ -34,6 +36,7 @@
             <li class="hideOnMobile"><a href="accessories.php">Accessories</a></li>
             <li class="hideOnMobile"><a href="laptop.php">Laptop</a></li>
             <li class="hideOnMobile"><a href="cameras.php">Camera</a></li>
+
             <li class="menu-button" id="nav"><img src="./assets/images/Hamburger-Menu-Blue-Version-01-1024x553-1.png"
                     alt="menu-bar" height="26"></li>
         </ul>

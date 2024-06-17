@@ -1,3 +1,4 @@
+
 <?php
 include('server/connection.php');
 if(isset($_GET['product_id'])){
@@ -135,5 +136,6 @@ $statement->close();
         }
       
         </script>
+
         <!--Footer-->
        <?php include('outline/footer.php'); ?>

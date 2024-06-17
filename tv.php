@@ -28,6 +28,7 @@
 
         <ul>
             <li class="head"><img src="" alt=""></li>
+
             <li class="hideOnMobile"><a href="index.php">Home</a></li>
             <li class="hideOnMobile"><a href="phone.php">Phone</a></li>
             <li class="hideOnMobile"><a href="tv.php">Tv</a></li>

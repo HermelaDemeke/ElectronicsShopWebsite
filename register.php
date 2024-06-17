@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 include('server/connection.php');
@@ -65,6 +64,7 @@ if (isset($_POST['register'])) {
 ?>
 
 <?php include('outline/header.php'); ?>
+
     <!--Register-->
     <section class="">
         <div class="container">
@@ -75,6 +75,7 @@ if (isset($_POST['register'])) {
             <form id="register-form" action="register.php" method="POST">
                 <p style = "color: red;"><?php  if(isset( $_GET['error'])){echo $_GET['error'];}?></p>
             <div class="form-group">
+
                     <label>Name</label> <br>
                     <input type="text" class="form-control" id="register-name" name="name" placeholder="name" required>
                 </div>
@@ -100,7 +101,5 @@ if (isset($_POST['register'])) {
             </form>
         </div>
     </section>
-
-
 
    <?php include('outline/footer.php'); ?>
