@@ -10,6 +10,37 @@
     <title>Electronics Shopping Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="./assets/js/navigate.js"></script>
+    <style>
+/* for phone.php image */
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 products per row, adjust as needed */
+  grid-gap: 20px; /* Adjust the gap between products as needed */
+}
+
+.product {
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  padding-bottom: 60%; /* Set the aspect ratio (1:1 in this example) */
+  overflow: hidden;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+}
+
+/* Add more styles as needed */
+
+    </style>
 </head>
 
 <body>
@@ -46,14 +77,16 @@
             <p> check out our unique phones</p>
         </div>
 
-        <div class="row">
+        <div class="product-container">
 
         <?php include('server/get_phone.php'); ?>
 
         <?php while($row = $phone->fetch_assoc()){?>
 
             <div class="product">
-               <img class="" src="assets/images/<?php echo $row['product_image'];?>" alt="smart phone">
+                <div class="image-container">
+               <img class="product-image" src="assets/images/<?php echo $row['product_image'];?>" alt="smart phone">
+               </div>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>

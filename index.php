@@ -1,4 +1,40 @@
 <?php include('outline/header.php'); ?>
+<style>
+    /* for phone.php image */
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Display 3 products per row, adjust as needed */
+    grid-gap: 20px;
+    /* Adjust the gap between products as needed */
+}
+
+.product {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    padding-bottom: 60%;
+    /* Set the aspect ratio (1:1 in this example) */
+    overflow: hidden;
+}
+
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio and fill the container */
+}
+
+
+
+
+</style>
  <!--Home-->
     <section id="home">
 <div>
@@ -55,11 +91,13 @@
 <p>check out our Featured products</p>
         </div>
     
-        <div class="row">
+        <div class="product-container">
         <?php include('server/featured_product.php');?>
         <?php while($row = $feature_pro ->fetch_assoc()){?>
 <div class="product">
-    <img class="" src="assets/images/<?php echo $row['product_image'] ;?>" alt="tv">
+    <div class="image-container">
+    <img class="product-image" src="assets/images/<?php echo $row['product_image'] ;?>" alt="tv">
+    </div>
     <div class="star">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -80,9 +118,75 @@
         <div class="contain">
 <h4>Mid Season Sale</h4>
 <h1>Awesome collection <br> UP TO 30% OFF</h1>
-<button>Shop Now</button>
+<button onclick="window.location.href='login.php';">Shop Now</button>
         </div>
     </section>
 
-    <?php include('outline/footer.php') ;?>
+    <!--Footer-->
+    <footer>
+       <div class="footer">
+    <div class="footer-one">
+<img src="" alt="">
+<p class="para">We provide the best product for the most affordable prices</p>
+    </div>
+<div class="footer-one">
+    <h5>Featured</h5>
+    <ul>
+        <li><a href="laptop.html">Laptops</a></li>
+        <li><a href="tv.html">Tv</a></li>
+        <li><a href="phone.php">Phones</a></li>
+        <li><a href="cameras.html">Cameras</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Electronics</a></li>
+    </ul>
+</div>
+    <div class="footer-one">
+        <h5 class="">Contact Us</h5>
+    <div>
+        <h6>Address</h6>
+        <p>1000 street Name, City</p>
+    </div>
+    <div>
+        <h6>Phone Number</h6>
+        <p>+251988747881</p>
+    </div>
+    <div>
+        <h6>Email</h6>
+        <p>bhmd0595@gmail.com</p>
+    </div>
+    </div>
+<div class="footer-one">
+    <h5>instagram</h5>
+    <div class="">
+<img src="assets/images/iphon.jpg" alt="phone" class="" width="100" height="100">
+<img src="assets/images/small-tvs-1628089080.jpg" alt="tv" class="" width="100" height="100">
+<img src="assets/images/lap2.jpg" alt="laptop" class="" width="100" height="100">
+<img src="assets/images/camera10.jpg" alt="camera" class="" width="100" height="100">
+<img src="assets/images/tab.jpg" alt="accessories" class="" width="100" height="100">
+    </div>
+</div>
+</div>
+
+<div>
+<div class="copy-right">
+    <!--  
+    <div>
+        <img src="assets/images/payment method.png" alt="paymentmethod">
+    </div>
+    -->
+    <div>
+        <p>eCommerce @2025 All Right Reserved</p>
+    </div>
+    <div class="images">
+        <a href="https://www.facebook.com/mahlet.demeke.184?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/zufii_0791?igsh=MWltMGkycjZyaGxxOA=="><i class="fab fa-instagram"></i></a>
+        <a href=" https://x.com/MahletDemeke6?t=0yrxQaRMM1zuN5tjKDJmYQ&s=35"><i class="fab fa-twitter"></i></a>
+
+    </div>
+</div>
+</div>
+    </footer>
+</body>
+</html>
     

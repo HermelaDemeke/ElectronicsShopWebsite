@@ -1,0 +1,35 @@
+
+/* for .php image */
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Display 3 products per row, adjust as needed */
+  grid-gap: 20px;
+
+  /* Adjust the gap between products as needed */
+}
+
+.product {
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  padding-bottom: 60%;
+
+  /* Set the aspect ratio (1:1 in this example) */
+  overflow: hidden;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+
+  /* Maintain aspect ratio and fill the container */
+}

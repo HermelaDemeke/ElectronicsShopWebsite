@@ -55,7 +55,7 @@
         <p>eCommerce @2025 All Right Reserved</p>
     </div>
     <div class="images">
-        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/mahlet.demeke.184?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
 

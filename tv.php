@@ -9,6 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Electronics Shopping Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/image.css">
     <script type="text/javascript" src="./assets/js/navigate.js"></script>
 </head>
 
@@ -46,14 +47,16 @@
             <p> check out our unique Tv</p>
         </div>
 
-        <div class="row">
+        <div class="product-container">
 
         <?php include('server/get_tv.php'); ?>
 
         <?php while($row = $tv->fetch_assoc()){?>
 
             <div class="product">
-                <img class="" src="assets/images/<?php echo $row['product_image'];?>" alt="amazontv">
+                <div class="image-container">
+                <img class="product-image" src="assets/images/<?php echo $row['product_image'];?>" alt="amazontv">
+                </div>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>

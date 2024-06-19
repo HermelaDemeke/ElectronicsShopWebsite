@@ -1,0 +1,60 @@
+body {
+  background-image: url(../assets/images/collection4.jpg);
+}
+
+.admin {
+  width: 300px;
+  margin: 0 auto;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.admin h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: #f5f5f5;
+}
+
+form input[type="submit"],
+form button {
+  background: #ad8863;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+  background: #ff9800;
+}
+
+form input[type="reset"] {
+  background: #f44336;
+}
+
+form input[type="reset"]:hover {
+  background: brown;
+}
+
+section.button {
+  display: flex;
+  justify-content: space-between;
+}

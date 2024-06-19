@@ -6,25 +6,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Electronics Shopping Center</title>
+    <title>MHD Electronics Shopping Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript" src="./assets/js/navigate.js"></script>
+    <script type="text/javascript" src="assets/js/navigate.js"></script>
+    <style>
+        .head {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.head img {
+  margin-right: 1000px;
+}
+    </style>
 </head>
 <body>
     <nav class="head-back">
             <ul class="sidebar">
-                <li id="nav2"><a href="#"><img src="./assets/images/images.png" height="26" alt=""></a></li>
-            <li class="head"><img src="assets/images/collection2.jpg" alt=""></li>
+            <li class="head"><img src="assets/images/mhd.jpg" alt="collection" width="100%" height="100%"></li> 
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="login.php">LOG IN</a></li>
                 <li><a href="register.php">SIGN UP</a></li>
                  <li><a href="contact.html">Contact Us</a></li>
+                 <li id="nav2"><a href="#"><img src="assets/images/images.png" height="26" alt=""></a></li>
             </ul>
 
         
         <ul>
-            <li class="head"><img src="" alt=""></li>
+            <li class="head"><img src="assets/images/mhd.jpg" alt="collection" width="100%" height = "100%"></li>
           <!--  <li><a href="index.php">Home</a></li> -->
             <li class="hideOnMobile"><a href="login.php">Shop</a></li>
              <li class="hideOnMobile"><a href="login.php">Login</a></li>
