@@ -45,7 +45,6 @@ header('location:account.php? error=password is not updated');
 }
 
 
-
 //get orders
 
 if(isset($_SESSION['logged_in'])){
@@ -66,7 +65,6 @@ if(isset($_SESSION['logged_in'])){
   background-size: cover;
 }
 
-    </style>
     <!--Account-->
 <section class="login">
     <div class="row">
@@ -80,6 +78,7 @@ if(isset($_SESSION['logged_in'])){
 <p>Email <span><?php if(isset($_SESSION['user_email'])){ echo $_SESSION['user_email'];}?></span></p>
 <p><a href="#order" id="order-btn">Your Orders</a></p>
 <p><a href="account.php?logout=1" id="logout-btn">Log Out</a></p>
+
     </div>
 </div>
 <div>
@@ -105,6 +104,7 @@ if(isset($_SESSION['logged_in'])){
 </section>
 
 <section class="orders" id="order">
+
     <div>
         <h2>Your Orders</h2>
         <hr>

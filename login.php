@@ -51,6 +51,7 @@ header('location: login.php?error=some thing went wrong');
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,7 +120,5 @@ header('location: login.php?error=some thing went wrong');
 </form>
 </div>
 </section>
-
-
 
        <?php include('outline/footer.php'); ?>
