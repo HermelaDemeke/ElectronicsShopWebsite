@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +74,7 @@
         </ul>
     </nav>
 
- <!--Home-->
+    <!--Home-->
     <section id="home">
 <div>
     <div class="contain-1">
@@ -120,7 +121,6 @@
     </div>
 </div>
     </section>
-
     <!--Featured-->
     <section id="Featured">
         <div class="container">
@@ -225,5 +225,3 @@
 </div>
 </div>
     </footer>
-
-    

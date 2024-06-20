@@ -76,7 +76,6 @@ function CalculateTotalCart(){
     }
     $_SESSION['total'] =$total;
 }
-
 ?>
 <?php include('outline/header.php'); ?>
 <!--Cart-->
@@ -141,4 +140,5 @@ function CalculateTotalCart(){
 
 </section>
 <!--Footer-->
+
     <?php include('outline/footer.php'); ?>
