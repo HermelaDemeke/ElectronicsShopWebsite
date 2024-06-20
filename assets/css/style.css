@@ -192,7 +192,6 @@ footer p {
   justify-content: space-between;
 }
 
-
 .product img {
   transition: 0.3s all;
 }
@@ -217,7 +216,6 @@ footer .copy-right img {
 .product:hover img {
   opacity: 0.7;
 }
-
 
 #new .one img {
   max-width: 100%;
@@ -296,7 +294,6 @@ footer .copy-right img {
   transition: 0.3s all;
 }
 
-
 .shop .buy-now {
   text-decoration: none;
 }
@@ -312,7 +309,6 @@ footer .copy-right img {
   transform: translateY(0);
   opacity: 1;
 }
-
 
 hr {
   width: 45px;

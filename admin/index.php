@@ -44,7 +44,7 @@ if (isset($_POST['login'])) {
             <input type="text" name="username" placeholder="Enter username" required>
             <input type="password" name="password" placeholder="Enter password" required>
             <section class="button">
-                <input type="submit" value="Login" name="login" required id="input" >
+                <input type="submit" id="login" value="Login" name="login" required id="input" >
 
                 <input type="reset" name="reset" id="input">
             </section>

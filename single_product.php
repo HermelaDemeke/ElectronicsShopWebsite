@@ -91,33 +91,8 @@ $statement->close();
 
 <?php } ?>
             </div>
-        </section>
-<!--Related Product-->
-<section id="related-product">
-    <div class="container">
-        <h3>Related Product</h3>
-        <hr width="1600">
-    </div>
-    <div class="row">
-        <div class="product">
-            <img class="" src="assets/images/amazontv.webp" alt="amazontv">
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h5 class="p-name">Smart Tv</h5>
-            <h4 class="p-price">$299.9</h4>
-            <button class="buy-now">Buy Now</button>
-        </div>
-        
-    </div>
 
-</section>
-
-        <script>
+            <script>
  var mainImg = document.getElementById("mainImg");
  var smallImg= document.getElementsByClassName("small-img");
      for(let i=0; i<4; i++)
@@ -128,5 +103,6 @@ $statement->close();
         }
       
         </script>
+        </section>
         <!--Footer-->
        <?php include('outline/footer.php'); ?>

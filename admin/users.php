@@ -68,7 +68,7 @@ a:hover {
 <body>
     <h1>MHD Electronics Shop</h1>
 
-    <h2>Orders</h2>
+    <h2>Users</h2>
     <table>
         <tr>
             <th>User Id</th>
@@ -93,8 +93,7 @@ a:hover {
                 <td><?php echo  $user_password; ?></td>
                
                 <td>
-                    <a href="edit.php?id=<?php echo $order_id; ?>">Edit</a>
-                    <a href="delete.php?delete_id=<?php echo $order_id; ?>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
+                    <a href="deleteuser.php?id=<?php echo $user_id; ?>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
                 </td>
             </tr>
         <?php
@@ -102,6 +101,5 @@ a:hover {
         ?>
     </table>
     <a href="index.php">Logout</a>
-
 </body>
 </html>

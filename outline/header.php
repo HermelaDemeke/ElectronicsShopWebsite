@@ -17,7 +17,7 @@
 }
 
 .head img {
-  margin-right: 1000px;
+  margin-right: 1040px;
 }
     </style>
 </head>
@@ -28,7 +28,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="login.php">LOG IN</a></li>
-                <li><a href="register.php">SIGN UP</a></li>
+                <li><a href="register.php">Sign Up</a></li>
                  <li><a href="contact.html">Contact Us</a></li>
                  <li id="nav2"><a href="#"><img src="assets/images/images.png" height="26" alt=""></a></li>
             </ul>
@@ -37,7 +37,7 @@
         <ul>
             <li class="head"><img src="assets/images/mhd.jpg" alt="collection" width="100%" height = "100%"></li>
           <!--  <li><a href="index.php">Home</a></li> -->
-            <li class="hideOnMobile"><a href="login.php">Shop</a></li>
+            <li class="hideOnMobile"><a href="shop.php">Shop</a></li>
              <li class="hideOnMobile"><a href="login.php">Login</a></li>
             <li class="hideOnMobile"><a href="register.php">SIGN UP</a></li>
             <li class="hideOnMobile"><a href="contact.html">Contact Us</a></li>

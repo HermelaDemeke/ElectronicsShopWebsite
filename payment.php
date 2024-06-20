@@ -19,13 +19,9 @@ if(isset($_POST['order_pay_btn'])){
 <input class="btn" type="submit" value="pay Now" />
 
 <?php } elseif(isset($_POST['order_status']) && $_POST['order_status'] == "not paid"){?>
-<p>Total Payment: $<?php echo $_POST['order_total_price']; ?></p>
+<p>Total Payment: $<?php echo $_POST['order_total_price']; ?></p> 
 <input class="btn" type="submit" value="pay Now" />
-        <?php } else{ ?>
-             <p>your cart is empty</p>
-            
-            <?php}?>
-       
+        <?php } ?>
     </div>
 </section>
 

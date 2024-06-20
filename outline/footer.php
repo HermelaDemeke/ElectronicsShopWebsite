@@ -1,4 +1,4 @@
-<!--Footer-->
+ <!--Footer-->
     <footer>
        <div class="footer">
     <div class="footer-one">
@@ -8,13 +8,11 @@
 <div class="footer-one">
     <h5>Featured</h5>
     <ul>
-        <li><a href="laptop.html">Laptops</a></li>
-        <li><a href="tv.html">Tv</a></li>
-        <li><a href="phone.php">Phones</a></li>
-        <li><a href="cameras.html">Cameras</a></li>
-        <li><a href="accessories.html">Accessories</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">Electronics</a></li>
+        <li><a href="shop.php">Laptops</a></li>
+        <li><a href="shop.php">Tv</a></li>
+        <li><a href="shop.php">Phones</a></li>
+        <li><a href="shop.php">Cameras</a></li>
+        <li><a href="shop.php">Accessories</a></li>
     </ul>
 </div>
     <div class="footer-one">
@@ -33,7 +31,7 @@
     </div>
     </div>
 <div class="footer-one">
-    <h5>instagram</h5>
+    <h5>Electronics</h5>
     <div class="">
 <img src="assets/images/iphon.jpg" alt="phone" class="" width="100" height="100">
 <img src="assets/images/small-tvs-1628089080.jpg" alt="tv" class="" width="100" height="100">
@@ -56,8 +54,8 @@
     </div>
     <div class="images">
         <a href="https://www.facebook.com/mahlet.demeke.184?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/zufii_0791?igsh=MWltMGkycjZyaGxxOA=="><i class="fab fa-instagram"></i></a>
+        <a href=" https://x.com/MahletDemeke6?t=0yrxQaRMM1zuN5tjKDJmYQ&s=35"><i class="fab fa-twitter"></i></a>
 
     </div>
 </div>
@@ -65,3 +63,4 @@
     </footer>
 </body>
 </html>
+    
