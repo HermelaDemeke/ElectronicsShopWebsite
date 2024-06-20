@@ -35,35 +35,6 @@ function CalculateTotalOrderPrice($order_details){
 ?>
 
 <?php include('outline/header.php'); ?>
-        <ul class="sidebar">
-            <li id="nav2"><a href="#"><img src="./assets/images/images.png" height="26" alt=""></a></li>
-            <li class="head"><img src="" alt=""></li>
-            <h5>MHD Electronics</h5>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="phone.html">Phone</a></li>
-            <li><a href="laptop.html">Laptop</a></li>
-            <li><a href="tv.html">Tv</a></li>
-            <li><a href="cameras.html">Cameras</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="#">SIGN UP</a></li>
-        </ul>
-
-
-        <ul>
-            <li class="head"><img src="" alt=""></li>
-            <h5>MHD Electronics</h5>
-            <li><a href="index.html">Home</a></li>
-            <li class="hideOnMobile"><a href="phone.html">Phone</a></li>
-            <li class="hideOnMobile"><a href="laptop.html">Laptop</a></li>
-            <li class="hideOnMobile"><a href="tv.html">Tv</a></li>
-            <li class="hideOnMobile"><a href="cameras.html">Cameras</a></li>
-            <li class="hideOnMobile"><a href="accessories.html">Accessories</a></li>
-            <li class="hideOnMobile"><a href="#">SIGN UP</a></li>
-            <li class="menu-button" id="nav"><img src="./assets/images/Hamburger-Menu-Blue-Version-01-1024x553-1.png"
-                    alt="menu-bar" height="26"></li>
-        </ul>
-    </nav>
-
 
 
 <!-- Order Detail  -->
@@ -108,8 +79,8 @@ function CalculateTotalOrderPrice($order_details){
 
             <form action="" style = "float: right;" method="POST" action="payment.php">
             <input type="hidden" name="order_total_price" value="<?php echo $order_total_price; ?>" />
-               <input type="hidden" name="order_status" value="<?php echo $order_status;?>" />  
-            <input type="submit" name="order_pay_btn" class=" btn btn-primary" value= "Pay Now">
+            <input type="hidden" name="order_status" value="<?php echo $order_status;?>" />  
+            <input type="submit" name="order_pay_btn" class=" btn btn-primary" value= "Pay Now"><br>
             </form>
 
 

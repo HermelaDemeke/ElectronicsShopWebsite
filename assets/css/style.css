@@ -218,8 +218,8 @@ footer .copy-right img {
 }
 
 #new .one img {
-  width: 633px;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -235,6 +235,7 @@ footer .copy-right img {
 
 #new .one {
   position: relative;
+  width: 30%; /* Adjust the width as needed */
 }
 
 #new .one .details {

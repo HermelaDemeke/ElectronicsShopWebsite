@@ -72,22 +72,15 @@ header('location: login.php?error=some thing went wrong');
             <li id="nav2"><a href="#"><img src="./assets/images/images.png" height="26" alt=""></a></li>
             <li class="head"><img src="" alt=""></li>
             <li><a href="index.php">Home</a></li>
-            <li><a href="phone.php">Phone</a></li>
-            <li><a href="tv.php">Tv</a></li>
-            <li><a href="accessories.php">Accessories</a></li>
-            <li><a href="laptop.php">Laptop</a></li>
-            <li><a href="cameras.php">Camera</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            
         </ul>
 
 
         <ul>
             <li class="head"><img src="" alt=""></li>
             <li class="hideOnMobile"><a href="index.php">Home</a></li>
-            <li class="hideOnMobile"><a href="phone.php">Phone</a></li>
-            <li class="hideOnMobile"><a href="tv.php">Tv</a></li>
-            <li class="hideOnMobile"><a href="accessories.php">Accessories</a></li>
-            <li class="hideOnMobile"><a href="laptop.php">Laptop</a></li>
-            <li class="hideOnMobile"><a href="cameras.php">Camera</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact Us</a></li>
             <li class="menu-button" id="nav"><img src="./assets/images/Hamburger-Menu-Blue-Version-01-1024x553-1.png"
                     alt="menu-bar" height="26"></li>
         </ul>
