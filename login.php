@@ -64,6 +64,14 @@ header('location: login.php?error=some thing went wrong');
     <title>Electronics Shopping Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="./assets/js/navigate.js"></script>
+    <style>
+    .login{
+  background-image: url('assets/images/login.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    </style>
 </head>
 
 <body>
@@ -87,7 +95,7 @@ header('location: login.php?error=some thing went wrong');
     </nav>
     
 <!--Login-->
-<section class="">
+<section class="login">
 <div class="container">
 <h2 class="">Login</h2>
 <hr>

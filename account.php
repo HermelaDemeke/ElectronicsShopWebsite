@@ -58,9 +58,15 @@ if(isset($_SESSION['logged_in'])){
 ?>
 
 <?php include('outline/header.php'); ?>
+<style>
+    .login{
+  background-image: url('assets/images/login.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
     <!--Account-->
-<section>
+<section class="login">
     <div class="row">
 <div class="account">
     <p style="color:green"><?php if(isset($_GET['register'])){echo $_GET['register'];} ?></p>
@@ -108,7 +114,7 @@ if(isset($_SESSION['logged_in'])){
                 <th>Order Cost</th>
                 <th>Order Status</th>
                 <th> Order Date</th>
-                <th>Order Details</th>
+                <th>check out</th>
              
             </tr>
             <?php while($row = $orders->fetch_assoc()) { ?>
@@ -127,7 +133,7 @@ if(isset($_SESSION['logged_in'])){
       <span><?php echo $row['order_date'];?></span>
                 </td>
                 <td>
-                    <form action="detail.php" method="POST">
+                    <form action="checkout.php" method="POST">
                         <input type="hidden" value="<?php echo $row['order_status']; ?>" name="order_status"/>
                         <input type="hidden" value="<?php echo $row['order_id']; ?>" name="order_id"/>
                         <input type="submit" class="order-detail-btn" value="details" name="detail"/>
