@@ -38,7 +38,6 @@
   object-fit: cover; /* Maintain aspect ratio and fill the container */
 }
 
-/* Add more styles as needed */
 
     </style>
 </head>

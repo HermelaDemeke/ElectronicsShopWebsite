@@ -63,10 +63,18 @@ if (isset($_POST['register'])) {
     }
 }
 ?>
+<style>
+    .login{
+  background-image: url('assets/images/login.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    </style>
 
 <?php include('outline/header.php'); ?>
     <!--Register-->
-    <section class="">
+    <section class="login">
         <div class="container">
             <h2 class="">Register</h2>
             <hr>

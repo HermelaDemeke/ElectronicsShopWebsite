@@ -22,6 +22,14 @@ if(!empty($_SESSION['cart'])){
     <title>Electronics Shopping Center</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="./assets/js/navigate.js"></script>
+    <style>
+    .login{
+  background-image: url('assets/images/login.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    </style>
     </head>
     
     <body>
@@ -42,7 +50,7 @@ if(!empty($_SESSION['cart'])){
         </nav>
 
         <!--Check-out-->
-<section class="">
+<section class="login">
     <div class="container">
         <h2 class="">Check-Out</h2>
         <hr>

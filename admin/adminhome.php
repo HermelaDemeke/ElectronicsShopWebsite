@@ -29,7 +29,7 @@ body {
 .admin {
   display: inline-block;
   padding: 16px 32px;
-  background-color: #4CAF50;
+  background-color: #4CAF50; 
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -41,7 +41,7 @@ body {
   background-color: #45a049;
 }
 
-/* Hover Effect */
+ /* Hover Effect  */
 .admin:before {
   content: "";
   position: absolute;
